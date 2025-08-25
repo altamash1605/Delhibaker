@@ -1,164 +1,202 @@
-<html lang="en"><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="theme-color" content="#fde7ec">
-    <title>Delhi Bakes — Home Baker</title>
-    <meta name="description" content="Home-baked cakes, cupcakes, and custom treats. Made with love in Delhi.">
+<html lang="en">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fde7ec">
+  <title>Delhi Bakes — Home Baker</title>
+  <meta name="description" content="Home-baked cakes, cupcakes, and custom treats. Made with love in Delhi.">
 
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@0.472.0/dist/umd/lucide.min.js" defer=""></script>
-  </head>
-  <body class="bg-rose-50 text-rose-950 antialiased selection:bg-rose-200/70 selection:text-rose-900">
-    <!-- Floating DM to Order Button -->
-    <div class="fixed inset-x-0 bottom-4 z-50 pointer-events-none">
-      <div class="mx-auto w-full max-w-sm px-4">
-        <a href="/order-form.html" target="_blank" rel="noopener" aria-label="DM to Order on Instagram" class="pointer-events-auto flex items-center justify-center gap-2 rounded-full bg-rose-600 py-3.5 px-5 text-white shadow-lg shadow-rose-900/10 hover:bg-rose-700 active:scale-[0.98] focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-400 transition" style="font-weight: 600; letter-spacing: -0.01em;">
-          <i data-lucide="instagram" class="w-5 h-5" style="stroke-width: 1.5;"></i>
-          <span class="text-base">Customize Now</span>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@0.472.0/dist/umd/lucide.min.js" defer=""></script>
+</head>
+
+<body class="bg-rose-50 text-rose-950 antialiased selection:bg-rose-200/70 selection:text-rose-900">
+  <!-- Floating DM to Order Button -->
+  <div class="fixed inset-x-0 bottom-4 z-50 pointer-events-none">
+    <div class="mx-auto w-full max-w-sm px-4">
+      <a href="/order-form.html" target="_blank" rel="noopener" aria-label="DM to Order on Instagram"
+        class="pointer-events-auto flex items-center justify-center gap-2 rounded-full bg-rose-600 py-3.5 px-5 text-white shadow-lg shadow-rose-900/10 hover:bg-rose-700 active:scale-[0.98] focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-400 transition"
+        style="font-weight: 600; letter-spacing: -0.01em;">
+        <i data-lucide="wand-2" class="w-5 h-5" style="stroke-width: 1.5;"></i>
+        <span class="text-base">Customize Now</span>
+      </a>
+    </div>
+    <div class="h-[env(safe-area-inset-bottom)]"></div>
+  </div>
+
+  <!-- Page Wrapper -->
+  <main class="mx-auto w-full max-w-screen-xl">
+    <!-- Hero -->
+    <header class="px-5 pt-6 pb-2 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <!-- Logo / Name -->
+        <div class="flex items-center gap-3">
+          <div
+            class="h-9 w-9 rounded-md bg-rose-200/70 text-rose-900 flex items-center justify-center shadow-sm ring-1 ring-rose-900/5">
+            <span class="text-sm" style="font-weight: 600; letter-spacing: -0.02em;">DB</span>
+          </div>
+          <div>
+            <h1 class="text-[20px] leading-6 tracking-tight font-semibold">Delhi Bakes</h1>
+            <p class="text-xs text-rose-500">Custom Cakes, Made Fresh</p>
+          </div>
+        </div>
+        <!-- Minimal nav to IG profile -->
+        <a href="https://instagram.com/delhibakes" target="_blank" rel="noopener"
+          class="inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-rose-700 ring-1 ring-rose-900/10 hover:bg-rose-100 hover:text-rose-900 transition focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-rose-400">
+          <i data-lucide="instagram" class="w-4 h-4" style="stroke-width: 1.5;"></i>
+          <span class="text-sm" style="font-weight: 500;">Instagram</span>
         </a>
       </div>
-      <div class="h-[env(safe-area-inset-bottom)]"></div>
-    </div>
+    </header>
 
-    <!-- Page Wrapper -->
-    <main class="mx-auto w-full max-w-screen-xl">
-      <!-- Hero -->
-      <header class="px-5 pt-6 pb-2 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between">
-          <!-- Logo / Name -->
-          <div class="flex items-center gap-3">
-            <div class="h-9 w-9 rounded-md bg-rose-200/70 text-rose-900 flex items-center justify-center shadow-sm ring-1 ring-rose-900/5">
-              <span class="text-sm" style="font-weight: 600; letter-spacing: -0.02em;">DB</span>
-            </div>
-            <div>
-              <h1 class="text-[20px] leading-6 tracking-tight font-semibold">Delhi Bakes</h1>
-              <p class="text-xs text-rose-500">Custom Cakes, Made Fresh</p>
-            </div>
-          </div>
-          <!-- Minimal nav to IG profile -->
-          <a href="https://instagram.com/delhibakes" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-rose-700 ring-1 ring-rose-900/10 hover:bg-rose-100 hover:text-rose-900 transition focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-rose-400">
-            <i data-lucide="instagram" class="w-4 h-4" style="stroke-width: 1.5;"></i>
-            <span class="text-sm" style="font-weight: 500;">Instagram</span>
-          </a>
+    <section aria-labelledby="hero" class="px-5 sm:px-6 lg:px-8">
+
+      <div class="relative overflow-hidden rounded-2xl bg-rose-100 ring-1 ring-rose-900/5">
+        <!-- Featured Product Photo -->
+        <a href="https://instagram.com/delhibakes" target="_blank" rel="noopener" class="block">
+          <img src="Assets/hero.png" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1100px"
+            alt="Strawberry cream cake on a pastel table" width="1800" height="1100"
+            class="h-[58vh] min-h-[360px] w-full object-cover" decoding="async" fetchpriority="high">
+        </a>
+
+        <!-- Minimal Label -->
+        <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+          <span
+            class="inline-flex items-center gap-2 rounded-full bg-white/85 px-3 py-2 text-rose-900 backdrop-blur ring-1 ring-rose-900/10">
+            <i data-lucide="cake" class="w-4 h-4" style="stroke-width: 1.5;"></i>
+            <span class="text-sm" style="font-weight: 600; letter-spacing: -0.01em;">Signature Cake</span>
+          </span>
+          <span
+            class="hidden sm:inline-flex items-center gap-1 rounded-full bg-white/80 px-3 py-2 text-rose-800 backdrop-blur ring-1 ring-rose-900/10">
+            <i data-lucide="map-pin" class="w-4 h-4" style="stroke-width: 1.5;"></i>
+            <span class="text-sm" style="font-weight: 500;">Delhi</span>
+          </span>
         </div>
-      </header>
+      </div>
+    </section>
 
-      <section aria-labelledby="hero" class="px-5 sm:px-6 lg:px-8">
+    <!-- Gallery -->
+    <section aria-labelledby="gallery" class="px-5 sm:px-6 lg:px-8">
+      <h2 id="gallery" class="sr-only">Gallery</h2>
 
-        <div class="relative overflow-hidden rounded-2xl bg-rose-100 ring-1 ring-rose-900/5">
-          <!-- Featured Product Photo -->
-          <a href="https://instagram.com/delhibakes" target="_blank" rel="noopener" class="block">
-            <img src="Assets/hero.png" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1100px" alt="Strawberry cream cake on a pastel table" width="1800" height="1100" class="h-[58vh] min-h-[360px] w-full object-cover" decoding="async" fetchpriority="high">
-          </a>
-
-          <!-- Minimal Label -->
-          <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/85 px-3 py-2 text-rose-900 backdrop-blur ring-1 ring-rose-900/10">
-              <i data-lucide="cake" class="w-4 h-4" style="stroke-width: 1.5;"></i>
-              <span class="text-sm" style="font-weight: 600; letter-spacing: -0.01em;">Signature Cake</span>
-            </span>
-            <span class="hidden sm:inline-flex items-center gap-1 rounded-full bg-white/80 px-3 py-2 text-rose-800 backdrop-blur ring-1 ring-rose-900/10">
-              <i data-lucide="map-pin" class="w-4 h-4" style="stroke-width: 1.5;"></i>
-              <span class="text-sm" style="font-weight: 500;">Delhi</span>
-            </span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Gallery -->
-      <section aria-labelledby="gallery" class="px-5 sm:px-6 lg:px-8">
-        <h2 id="gallery" class="sr-only">Gallery</h2>
-
-        <div class="mt-6 grid grid-cols-1 gap-4 sm:gap-5">
-          <!-- Row 1: Two-up -->
-          <div class="grid grid-cols-2 gap-4 sm:gap-5">
-            <!-- Cakes -->
-            <a href="https://instagram.com/delhibakes" target="_blank" rel="noopener" class="group relative overflow-hidden rounded-2xl bg-rose-100 ring-1 ring-rose-900/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400">
-              <img src="Assets/customcake.png" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 45vw, 520px" alt="Freshly iced cake with berries" width="1200" height="1400" class="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" decoding="async">
-              <span class="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-white/85 px-3 py-1.5 text-rose-900 backdrop-blur ring-1 ring-rose-900/10">
-                <i data-lucide="layers" class="w-4 h-4" style="stroke-width: 1.5;"></i>
-                <span class="text-sm" style="font-weight: 600;">Cakes</span>
-              </span>
-            </a>
-
-            <!-- Cupcakes -->
-            <a href="https://instagram.com/delhibakes" target="_blank" rel="noopener" class="group relative overflow-hidden rounded-2xl bg-rose-100 ring-1 ring-rose-900/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400">
-              <img src="Assets/muffin.png" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 45vw, 520px" alt="Pastel frosted cupcakes" width="1200" height="1400" class="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" decoding="async">
-              <span class="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-white/85 px-3 py-1.5 text-rose-900 backdrop-blur ring-1 ring-rose-900/10">
-                <i data-lucide="cup-soda" class="w-4 h-4" style="stroke-width: 1.5;"></i>
-                <span class="text-sm" style="font-weight: 600;">Cupcakes</span>
-              </span>
-            </a>
-          </div>
-
-          <!-- Row 2: Full-width -->
-          <a href="https://instagram.com/delhibakes" target="_blank" rel="noopener" class="group relative overflow-hidden rounded-2xl bg-rose-100 ring-1 ring-rose-900/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400">
-            <img src="Assets/cheesecake.png" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1100px" alt="Assorted pastries on a pastel backdrop" width="2000" height="1000" class="h-64 sm:h-80 md:h-96 w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]" loading="lazy" decoding="async">
-            <span class="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-white/85 px-3 py-1.5 text-rose-900 backdrop-blur ring-1 ring-rose-900/10">
-              <i data-lucide="gallery-horizontal-end" class="w-4 h-4" style="stroke-width: 1.5;"></i>
-              <span class="text-sm" style="font-weight: 600;">Pastries</span>
+      <div class="mt-6 grid grid-cols-1 gap-4 sm:gap-5">
+        <!-- Row 1: Two-up -->
+        <div class="grid grid-cols-2 gap-4 sm:gap-5">
+          <!-- Cakes -->
+          <a href="https://instagram.com/delhibakes" target="_blank" rel="noopener"
+            class="group relative overflow-hidden rounded-2xl bg-rose-100 ring-1 ring-rose-900/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400">
+            <img src="Assets/customcake.png" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 45vw, 520px"
+              alt="Freshly iced cake with berries" width="1200" height="1400"
+              class="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy"
+              decoding="async">
+            <span
+              class="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-white/85 px-3 py-1.5 text-rose-900 backdrop-blur ring-1 ring-rose-900/10">
+              <i data-lucide="layers" class="w-4 h-4" style="stroke-width: 1.5;"></i>
+              <span class="text-sm" style="font-weight: 600;">Cakes</span>
             </span>
           </a>
 
-          <!-- Row 3: Two-up -->
-          <div class="grid grid-cols-2 gap-4 sm:gap-5">
-            <!-- Custom Orders -->
-            <a href="https://instagram.com/delhibakes" target="_blank" rel="noopener" class="group relative overflow-hidden rounded-2xl bg-rose-100 ring-1 ring-rose-900/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400">
-              <img src="Assets/customcakeprocess.png" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 45vw, 520px" alt="Custom decorated cake with floral accents" width="1200" height="1400" class="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" decoding="async">
-              <span class="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-white/85 px-3 py-1.5 text-rose-900 backdrop-blur ring-1 ring-rose-900/10">
-                <i data-lucide="sparkles" class="w-4 h-4" style="stroke-width: 1.5;"></i>
-                <span class="text-sm" style="font-weight: 600;">Custom</span>
-              </span>
-            </a>
-
-            <!-- Cookies / Bites -->
-            <a href="https://instagram.com/delhibakes" target="_blank" rel="noopener" class="group relative overflow-hidden rounded-2xl bg-rose-100 ring-1 ring-rose-900/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400">
-              <img src="Assets/cookie.png" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 45vw, 520px" alt="Delicate cookies and bites" width="1200" height="1400" class="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" decoding="async">
-              <span class="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-white/85 px-3 py-1.5 text-rose-900 backdrop-blur ring-1 ring-rose-900/10">
-                <i data-lucide="cookie" class="w-4 h-4" style="stroke-width: 1.5;"></i>
-                <span class="text-sm" style="font-weight: 600;">Bites</span>
-              </span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Tagline -->
-      <section class="px-5 sm:px-6 lg:px-8">
-        <div class="mx-auto mt-8 mb-28 max-w-2xl text-center">
-          <p class="text-base sm:text-lg text-rose-800">
-            <span class="inline-block rounded-full bg-rose-100 px-3 py-1.5 ring-1 ring-rose-900/10">
-              Made with love in Delhi
+          <!-- Cupcakes -->
+          <a href="https://instagram.com/delhibakes" target="_blank" rel="noopener"
+            class="group relative overflow-hidden rounded-2xl bg-rose-100 ring-1 ring-rose-900/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400">
+            <img src="Assets/muffin.png" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 45vw, 520px"
+              alt="Pastel frosted cupcakes" width="1200" height="1400"
+              class="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy"
+              decoding="async">
+            <span
+              class="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-white/85 px-3 py-1.5 text-rose-900 backdrop-blur ring-1 ring-rose-900/10">
+              <i data-lucide="cup-soda" class="w-4 h-4" style="stroke-width: 1.5;"></i>
+              <span class="text-sm" style="font-weight: 600;">Cupcakes</span>
             </span>
-          </p>
+          </a>
         </div>
-      </section>
-    </main>
 
-    <!-- Footer Divider (subtle) -->
-    <footer class="px-5 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-screen-xl border-t border-rose-200/70"></div>
-      <div class="mx-auto max-w-screen-xl py-6 text-center text-rose-700">
-        <p class="text-sm" style="font-family: 'Quicksand', ui-sans-serif, system-ui; font-weight: 500;">
-          © <span id="year">2025</span> Delhi Bakes
+        <!-- Row 2: Full-width -->
+        <a href="https://instagram.com/delhibakes" target="_blank" rel="noopener"
+          class="group relative overflow-hidden rounded-2xl bg-rose-100 ring-1 ring-rose-900/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400">
+          <img src="Assets/cheesecake.png" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1100px"
+            alt="Assorted pastries on a pastel backdrop" width="2000" height="1000"
+            class="h-64 sm:h-80 md:h-96 w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+            loading="lazy" decoding="async">
+          <span
+            class="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-white/85 px-3 py-1.5 text-rose-900 backdrop-blur ring-1 ring-rose-900/10">
+            <i data-lucide="gallery-horizontal-end" class="w-4 h-4" style="stroke-width: 1.5;"></i>
+            <span class="text-sm" style="font-weight: 600;">Pastries</span>
+          </span>
+        </a>
+
+        <!-- Row 3: Two-up -->
+        <div class="grid grid-cols-2 gap-4 sm:gap-5">
+          <!-- Custom Orders -->
+          <a href="https://instagram.com/delhibakes" target="_blank" rel="noopener"
+            class="group relative overflow-hidden rounded-2xl bg-rose-100 ring-1 ring-rose-900/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400">
+            <img src="Assets/customcakeprocess.png" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 45vw, 520px"
+              alt="Custom decorated cake with floral accents" width="1200" height="1400"
+              class="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy"
+              decoding="async">
+            <span
+              class="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-white/85 px-3 py-1.5 text-rose-900 backdrop-blur ring-1 ring-rose-900/10">
+              <i data-lucide="sparkles" class="w-4 h-4" style="stroke-width: 1.5;"></i>
+              <span class="text-sm" style="font-weight: 600;">Custom</span>
+            </span>
+          </a>
+
+          <!-- Cookies / Bites -->
+          <a href="https://instagram.com/delhibakes" target="_blank" rel="noopener"
+            class="group relative overflow-hidden rounded-2xl bg-rose-100 ring-1 ring-rose-900/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400">
+            <img src="Assets/cookie.png" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 45vw, 520px"
+              alt="Delicate cookies and bites" width="1200" height="1400"
+              class="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy"
+              decoding="async">
+            <span
+              class="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-white/85 px-3 py-1.5 text-rose-900 backdrop-blur ring-1 ring-rose-900/10">
+              <i data-lucide="cookie" class="w-4 h-4" style="stroke-width: 1.5;"></i>
+              <span class="text-sm" style="font-weight: 600;">Bites</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tagline -->
+    <section class="px-5 sm:px-6 lg:px-8">
+      <div class="mx-auto mt-8 mb-28 max-w-2xl text-center">
+        <p class="text-base sm:text-lg text-rose-800">
+          <span class="inline-block rounded-full bg-rose-100 px-3 py-1.5 ring-1 ring-rose-900/10">
+            Made with love in Delhi
+          </span>
         </p>
       </div>
-    </footer>
+    </section>
+  </main>
 
-    <!-- Body font setup (inline style as requested) -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        document.body.style.fontFamily = "'Quicksand', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans'";
-        if (window.lucide) lucide.createIcons();
-        var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
-      });
-    </script>
-  
-</body></html>
+  <!-- Footer Divider (subtle) -->
+  <footer class="px-5 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-screen-xl border-t border-rose-200/70"></div>
+    <div class="mx-auto max-w-screen-xl py-6 text-center text-rose-700">
+      <p class="text-sm" style="font-family: 'Quicksand', ui-sans-serif, system-ui; font-weight: 500;">
+        © <span id="year">2025</span> Delhi Bakes
+      </p>
+    </div>
+  </footer>
+
+  <!-- Body font setup (inline style as requested) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.body.style.fontFamily = "'Quicksand', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans'";
+      if (window.lucide) lucide.createIcons();
+      var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+    });
+  </script>
+
+</body>
+
+</html>
