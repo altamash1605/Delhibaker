@@ -1,0 +1,612 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Delhi Bakes — Custom Cake Order</title>
+    <meta name="theme-color" content="#fce7f3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="bg-rose-50 text-rose-900 antialiased [font-family:Inter,ui-sans-serif,system-ui] max-w-md mx-auto selection:bg-rose-200 selection:text-rose-900">
+    <!-- Header -->
+    <header class="sticky top-0 z-40 border-b border-rose-200/70 bg-rose-50/80 backdrop-blur">
+      <div class="px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="h-9 w-9 rounded-lg bg-rose-100 text-rose-700 flex items-center justify-center font-semibold tracking-tight">
+            DB
+          </div>
+          <div>
+            <h1 class="text-[20px] leading-6 tracking-tight font-semibold">Delhi Bakers</h1>
+            <p class="text-xs text-rose-500">Custom Cakes, Made Fresh</p>
+          </div>
+        </div>
+        <a href="tel:+911234567890" class="inline-flex items-center gap-2 text-rose-700 hover:text-rose-900 active:scale-[.98] transition">
+          <i data-lucide="phone" class="h-5 w-5"></i>
+        </a>
+      </div>
+    </header>
+
+    <main class="px-4 pt-4 pb-40 space-y-4">
+      <!-- Banner -->
+      <section class="relative overflow-hidden rounded-xl border border-rose-200 bg-gradient-to-b from-rose-50 to-rose-100">
+        <div class="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="" class="h-full w-full object-cover opacity-10">
+        </div>
+        <div class="relative p-4">
+          <div class="flex items-center gap-2 text-rose-700">
+            <i data-lucide="cake" class="h-5 w-5"></i>
+            <span class="text-sm font-medium">Custom Cake Order</span>
+          </div>
+          <p class="mt-1 text-[13px] text-rose-600">Share your preferences and we’ll bake your cake to perfection.</p>
+        </div>
+      </section>
+
+      <form id="cakeForm" class="space-y-6">
+        <!-- Contact Details -->
+        <section class="rounded-xl bg-white border border-rose-200 shadow-sm">
+          <div class="px-4 pt-4 pb-3 border-b border-rose-100">
+            <div class="flex items-center gap-2">
+              <i data-lucide="user-round" class="h-5 w-5 text-rose-600"></i>
+              <h2 class="text-[18px] tracking-tight font-semibold">Your Details</h2>
+            </div>
+          </div>
+          <div class="p-4 space-y-3">
+            <div class="flex items-center gap-3 rounded-lg border border-rose-200 bg-white px-3 py-3 focus-within:ring-2 focus-within:ring-rose-400 ring-inset transition">
+              <i data-lucide="user" class="h-5 w-5 text-rose-500"></i>
+              <input id="name" name="name" type="text" inputmode="text" autocomplete="name" placeholder="Full name" class="w-full bg-transparent outline-none text-[15px] placeholder:text-rose-400">
+            </div>
+            <div class="flex items-center gap-3 rounded-lg border border-rose-200 bg-white px-3 py-3 focus-within:ring-2 focus-within:ring-rose-400 ring-inset transition">
+              <i data-lucide="phone" class="h-5 w-5 text-rose-500"></i>
+              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Phone number" class="w-full bg-transparent outline-none text-[15px] placeholder:text-rose-400">
+            </div>
+            <div class="flex items-center gap-3 rounded-lg border border-rose-200 bg-white px-3 py-3 focus-within:ring-2 focus-within:ring-rose-400 ring-inset transition">
+              <i data-lucide="mail" class="h-5 w-5 text-rose-500"></i>
+              <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Email (optional)" class="w-full bg-transparent outline-none text-[15px] placeholder:text-rose-400">
+            </div>
+          </div>
+        </section>
+
+        <!-- Order Type & Schedule -->
+        <section class="rounded-xl bg-white border border-rose-200 shadow-sm">
+          <div class="px-4 pt-4 pb-3 border-b border-rose-100">
+            <div class="flex items-center gap-2">
+              <i data-lucide="truck" class="h-5 w-5 text-rose-600"></i>
+              <h2 class="text-[18px] tracking-tight font-semibold">Delivery or Pickup</h2>
+            </div>
+          </div>
+          <div class="p-4 space-y-4">
+            <!-- Delivery/Pickup segmented -->
+            <div class="grid grid-cols-2 gap-2">
+              <label class="relative">
+                <input type="radio" name="fulfillment" value="delivery" id="delivery" class="peer absolute inset-0 opacity-0" checked="">
+                <div class="flex items-center justify-center gap-2 rounded-lg border border-rose-300 bg-rose-50 px-3 py-3 text-rose-700 peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition">
+                  <i data-lucide="map-pin" class="h-5 w-5"></i>
+                  <span class="text-sm font-medium">Delivery</span>
+                </div>
+              </label>
+              <label class="relative">
+                <input type="radio" name="fulfillment" value="pickup" id="pickup" class="peer absolute inset-0 opacity-0">
+                <div class="flex items-center justify-center gap-2 rounded-lg border border-rose-300 bg-rose-50 px-3 py-3 text-rose-700 peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition">
+                  <i data-lucide="store" class="h-5 w-5"></i>
+                  <span class="text-sm font-medium">Pickup</span>
+                </div>
+              </label>
+            </div>
+
+            <!-- Date/Time -->
+            <div class="grid grid-cols-2 gap-3">
+              <div class="flex items-center gap-3 rounded-lg border border-rose-200 bg-white px-3 py-3 focus-within:ring-2 focus-within:ring-rose-400 ring-inset transition">
+                <i data-lucide="calendar" class="h-5 w-5 text-rose-500"></i>
+                <input id="date" name="date" type="date" class="w-full bg-transparent outline-none text-[15px] placeholder:text-rose-400 [color-scheme:light]">
+              </div>
+              <div class="flex items-center gap-3 rounded-lg border border-rose-200 bg-white px-3 py-3 focus-within:ring-2 focus-within:ring-rose-400 ring-inset transition">
+                <i data-lucide="clock-4" class="h-5 w-5 text-rose-500"></i>
+                <input id="time" name="time" type="time" class="w-full bg-transparent outline-none text-[15px] placeholder:text-rose-400 [color-scheme:light]">
+              </div>
+            </div>
+
+            <!-- Address (conditional) -->
+            <div id="addressBlock" class="space-y-3">
+              <div class="flex items-center gap-3 rounded-lg border border-rose-200 bg-white px-3 py-3 focus-within:ring-2 focus-within:ring-rose-400 ring-inset transition">
+                <i data-lucide="navigation" class="h-5 w-5 text-rose-500"></i>
+                <input id="address1" name="address1" type="text" placeholder="Address line" class="w-full bg-transparent outline-none text-[15px] placeholder:text-rose-400">
+              </div>
+              <div class="grid grid-cols-3 gap-3">
+                <div class="col-span-2 flex items-center gap-3 rounded-lg border border-rose-200 bg-white px-3 py-3 focus-within:ring-2 focus-within:ring-rose-400 ring-inset transition">
+                  <i data-lucide="map" class="h-5 w-5 text-rose-500"></i>
+                  <input id="city" name="city" type="text" placeholder="City" class="w-full bg-transparent outline-none text-[15px] placeholder:text-rose-400">
+                </div>
+                <div class="flex items-center gap-3 rounded-lg border border-rose-200 bg-white px-3 py-3 focus-within:ring-2 focus-within:ring-rose-400 ring-inset transition">
+                  <i data-lucide="hash" class="h-5 w-5 text-rose-500"></i>
+                  <input id="pincode" name="pincode" type="text" inputmode="numeric" placeholder="PIN" class="w-full bg-transparent outline-none text-[15px] placeholder:text-rose-400">
+                </div>
+              </div>
+              <p class="text-[11px] text-rose-500">Delivery fee applies based on location (est. ₹99 within service area).</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Cake Preferences -->
+        <section class="rounded-xl bg-white border border-rose-200 shadow-sm">
+          <div class="px-4 pt-4 pb-3 border-b border-rose-100">
+            <div class="flex items-center gap-2">
+              <i data-lucide="cupcake" class="h-5 w-5 text-rose-600"></i>
+              <h2 class="text-[18px] tracking-tight font-semibold">Cake Preferences</h2>
+            </div>
+          </div>
+          <div class="p-4 space-y-5">
+            <!-- Size -->
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <label class="text-[13px] text-rose-600 font-medium">Size (kg)</label>
+                <span id="sizeHint" class="text-[11px] text-rose-500">Feeds ~10 per kg</span>
+              </div>
+              <div id="sizeGroup" class="grid grid-cols-3 gap-2">
+                <!-- Radio chips -->
+                <label class="relative">
+                  <input type="radio" name="size" value="0.5" class="peer absolute inset-0 opacity-0">
+                  <div class="rounded-lg border border-rose-300 bg-rose-50 px-3 py-2.5 text-center text-sm text-rose-700 peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition">0.5</div>
+                </label>
+                <label class="relative">
+                  <input type="radio" name="size" value="1" class="peer absolute inset-0 opacity-0" checked="">
+                  <div class="rounded-lg border border-rose-300 bg-rose-50 px-3 py-2.5 text-center text-sm text-rose-700 peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition">1</div>
+                </label>
+                <label class="relative">
+                  <input type="radio" name="size" value="1.5" class="peer absolute inset-0 opacity-0">
+                  <div class="rounded-lg border border-rose-300 bg-rose-50 px-3 py-2.5 text-center text-sm text-rose-700 peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition">1.5</div>
+                </label>
+                <label class="relative">
+                  <input type="radio" name="size" value="2" class="peer absolute inset-0 opacity-0">
+                  <div class="rounded-lg border border-rose-300 bg-rose-50 px-3 py-2.5 text-center text-sm text-rose-700 peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition">2</div>
+                </label>
+                <label class="relative">
+                  <input type="radio" name="size" value="3" class="peer absolute inset-0 opacity-0">
+                  <div class="rounded-lg border border-rose-300 bg-rose-50 px-3 py-2.5 text-center text-sm text-rose-700 peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition">3</div>
+                </label>
+                <label class="relative">
+                  <input type="radio" name="size" value="4" class="peer absolute inset-0 opacity-0">
+                  <div class="rounded-lg border border-rose-300 bg-rose-50 px-3 py-2.5 text-center text-sm text-rose-700 peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition">4</div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Shape -->
+            <div class="space-y-2">
+              <label class="text-[13px] text-rose-600 font-medium">Shape</label>
+              <div class="grid grid-cols-3 gap-2">
+                <label class="relative">
+                  <input type="radio" name="shape" value="round" class="peer absolute inset-0 opacity-0" checked="">
+                  <div class="rounded-lg border border-rose-300 bg-rose-50 px-3 py-3 text-center text-sm text-rose-700 peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition flex flex-col items-center gap-1">
+                    <i data-lucide="circle" class="h-5 w-5"></i>
+                    <span>Round</span>
+                  </div>
+                </label>
+                <label class="relative">
+                  <input type="radio" name="shape" value="square" class="peer absolute inset-0 opacity-0">
+                  <div class="rounded-lg border border-rose-300 bg-rose-50 px-3 py-3 text-center text-sm text-rose-700 peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition flex flex-col items-center gap-1">
+                    <i data-lucide="square" class="h-5 w-5"></i>
+                    <span>Square</span>
+                  </div>
+                </label>
+                <label class="relative">
+                  <input type="radio" name="shape" value="heart" class="peer absolute inset-0 opacity-0">
+                  <div class="rounded-lg border border-rose-300 bg-rose-50 px-3 py-3 text-center text-sm text-rose-700 peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition flex flex-col items-center gap-1">
+                    <i data-lucide="heart" class="h-5 w-5"></i>
+                    <span>Heart</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Flavor -->
+            <div class="space-y-2">
+              <label class="text-[13px] text-rose-600 font-medium">Flavor</label>
+              <div id="flavorGroup" class="flex flex-wrap gap-2">
+                <!-- Chips -->
+                <label class="relative">
+                  <input type="radio" name="flavor" value="vanilla" class="peer absolute inset-0 opacity-0" checked="">
+                  <div class="px-3 py-2 rounded-full border border-rose-300 bg-rose-50 text-rose-700 text-sm peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition">Vanilla</div>
+                </label>
+                <label class="relative">
+                  <input type="radio" name="flavor" value="chocolate" class="peer absolute inset-0 opacity-0">
+                  <div class="px-3 py-2 rounded-full border border-rose-300 bg-rose-50 text-rose-700 text-sm peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition">Chocolate</div>
+                </label>
+                <label class="relative">
+                  <input type="radio" name="flavor" value="red velvet" class="peer absolute inset-0 opacity-0">
+                  <div class="px-3 py-2 rounded-full border border-rose-300 bg-rose-50 text-rose-700 text-sm peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition">Red Velvet</div>
+                </label>
+                <label class="relative">
+                  <input type="radio" name="flavor" value="butterscotch" class="peer absolute inset-0 opacity-0">
+                  <div class="px-3 py-2 rounded-full border border-rose-300 bg-rose-50 text-rose-700 text-sm peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition">Butterscotch</div>
+                </label>
+                <label class="relative">
+                  <input type="radio" name="flavor" value="black forest" class="peer absolute inset-0 opacity-0">
+                  <div class="px-3 py-2 rounded-full border border-rose-300 bg-rose-50 text-rose-700 text-sm peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition">Black Forest</div>
+                </label>
+                <label class="relative">
+                  <input type="radio" name="flavor" value="pineapple" class="peer absolute inset-0 opacity-0">
+                  <div class="px-3 py-2 rounded-full border border-rose-300 bg-rose-50 text-rose-700 text-sm peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition">Pineapple</div>
+                </label>
+                <label class="relative">
+                  <input type="radio" name="flavor" value="fresh fruit" class="peer absolute inset-0 opacity-0">
+                  <div class="px-3 py-2 rounded-full border border-rose-300 bg-rose-50 text-rose-700 text-sm peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition">Fresh Fruit</div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Filling -->
+            <div class="space-y-2">
+              <label class="text-[13px] text-rose-600 font-medium">Filling</label>
+              <div id="fillingGroup" class="flex flex-wrap gap-2">
+                <label class="relative">
+                  <input type="radio" name="filling" value="whipped cream" class="peer absolute inset-0 opacity-0" checked="">
+                  <div class="px-3 py-2 rounded-full border border-rose-300 bg-rose-50 text-rose-700 text-sm peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition">Whipped Cream</div>
+                </label>
+                <label class="relative">
+                  <input type="radio" name="filling" value="buttercream" class="peer absolute inset-0 opacity-0">
+                  <div class="px-3 py-2 rounded-full border border-rose-300 bg-rose-50 text-rose-700 text-sm peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition">Buttercream</div>
+                </label>
+                <label class="relative">
+                  <input type="radio" name="filling" value="mousse" class="peer absolute inset-0 opacity-0">
+                  <div class="px-3 py-2 rounded-full border border-rose-300 bg-rose-50 text-rose-700 text-sm peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition">Mousse</div>
+                </label>
+                <label class="relative">
+                  <input type="radio" name="filling" value="cream cheese" class="peer absolute inset-0 opacity-0">
+                  <div class="px-3 py-2 rounded-full border border-rose-300 bg-rose-50 text-rose-700 text-sm peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition">Cream Cheese</div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Eggless Toggle -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <i data-lucide="egg-off" class="h-5 w-5 text-rose-600"></i>
+                <span class="text-[13px] text-rose-700 font-medium">Eggless</span>
+              </div>
+              <label class="relative inline-flex items-center">
+                <input id="eggless" type="checkbox" class="peer sr-only">
+                <span class="w-12 h-7 rounded-full border border-rose-300 bg-rose-100 peer-checked:bg-rose-600 transition-colors duration-300 relative">
+                  <span class="absolute left-1 top-1 h-5 w-5 rounded-full bg-white shadow transition-transform duration-300 peer-checked:translate-x-5"></span>
+                </span>
+              </label>
+            </div>
+
+            <!-- Toppings -->
+            <div class="space-y-2">
+              <label class="text-[13px] text-rose-600 font-medium">Toppings</label>
+              <div id="toppingsGroup" class="flex flex-wrap gap-2">
+                <!-- Custom checkboxes -->
+                <label class="relative">
+                  <input type="checkbox" value="nuts" class="peer absolute inset-0 opacity-0">
+                  <div class="px-3 py-2 rounded-full border border-rose-300 bg-rose-50 text-rose-700 text-sm peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition flex items-center gap-1.5">
+                    <i data-lucide="square-check" class="h-4 w-4 opacity-70"></i>
+                    Nuts
+                  </div>
+                </label>
+                <label class="relative">
+                  <input type="checkbox" value="fresh fruits" class="peer absolute inset-0 opacity-0">
+                  <div class="px-3 py-2 rounded-full border border-rose-300 bg-rose-50 text-rose-700 text-sm peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition flex items-center gap-1.5">
+                    <i data-lucide="square-check" class="h-4 w-4 opacity-70"></i>
+                    Fresh Fruits
+                  </div>
+                </label>
+                <label class="relative">
+                  <input type="checkbox" value="sprinkles" class="peer absolute inset-0 opacity-0">
+                  <div class="px-3 py-2 rounded-full border border-rose-300 bg-rose-50 text-rose-700 text-sm peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition flex items-center gap-1.5">
+                    <i data-lucide="square-check" class="h-4 w-4 opacity-70"></i>
+                    Sprinkles
+                  </div>
+                </label>
+                <label class="relative">
+                  <input type="checkbox" value="chocolate chips" class="peer absolute inset-0 opacity-0">
+                  <div class="px-3 py-2 rounded-full border border-rose-300 bg-rose-50 text-rose-700 text-sm peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition flex items-center gap-1.5">
+                    <i data-lucide="square-check" class="h-4 w-4 opacity-70"></i>
+                    Chocolate Chips
+                  </div>
+                </label>
+                <label class="relative">
+                  <input type="checkbox" value="fondant decor" class="peer absolute inset-0 opacity-0">
+                  <div class="px-3 py-2 rounded-full border border-rose-300 bg-rose-50 text-rose-700 text-sm peer-checked:bg-rose-600 peer-checked:text-white peer-checked:border-rose-600 transition flex items-center gap-1.5">
+                    <i data-lucide="square-check" class="h-4 w-4 opacity-70"></i>
+                    Fondant Decor
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Message on Cake -->
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <label for="message" class="text-[13px] text-rose-600 font-medium">Message on Cake</label>
+                <span id="msgCount" class="text-[11px] text-rose-500">0 / 30</span>
+              </div>
+              <div class="rounded-lg border border-rose-200 bg-white px-3 py-2.5 focus-within:ring-2 focus-within:ring-rose-400 ring-inset transition">
+                <input id="message" name="message" type="text" maxlength="30" placeholder="e.g. Happy Birthday, Aanya!" class="w-full bg-transparent outline-none text-[15px] placeholder:text-rose-400">
+              </div>
+            </div>
+
+            <!-- Reference Image -->
+            <div class="space-y-2">
+              <label class="text-[13px] text-rose-600 font-medium">Reference Image (optional)</label>
+              <input id="refImage" type="file" accept="image/*" class="hidden">
+              <label for="refImage" class="block rounded-lg border border-rose-300 bg-rose-50 p-3 active:scale-[.99] transition">
+                <div class="flex items-center gap-3">
+                  <div class="h-10 w-10 rounded-md bg-white border border-rose-200 flex items-center justify-center">
+                    <i data-lucide="image-plus" class="h-5 w-5 text-rose-600"></i>
+                  </div>
+                  <div class="flex-1">
+                    <p class="text-[13px] text-rose-800 font-medium">Upload image</p>
+                    <p id="fileName" class="text-[11px] text-rose-500">JPG, PNG up to 5MB</p>
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <!-- Notes -->
+            <div class="space-y-2">
+              <label for="notes" class="text-[13px] text-rose-600 font-medium">Additional Notes</label>
+              <div class="rounded-lg border border-rose-200 bg-white px-3 py-2.5 focus-within:ring-2 focus-within:ring-rose-400 ring-inset transition">
+                <textarea id="notes" name="notes" rows="3" placeholder="Any allergies, design ideas, colors, etc." class="w-full bg-transparent outline-none text-[15px] placeholder:text-rose-400 resize-none"></textarea>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Summary -->
+        <section class="rounded-xl bg-white border border-rose-200 shadow-sm">
+          <div class="px-4 pt-4 pb-3 border-b border-rose-100">
+            <div class="flex items-center gap-2">
+              <i data-lucide="receipt" class="h-5 w-5 text-rose-600"></i>
+              <h2 class="text-[18px] tracking-tight font-semibold">Order Summary</h2>
+            </div>
+          </div>
+          <div class="p-4 space-y-3">
+            <div class="flex items-center justify-between text-[14px]">
+              <span class="text-rose-600">Size</span>
+              <span id="sumSize" class="font-medium">1 kg</span>
+            </div>
+            <div class="flex items-center justify-between text-[14px]">
+              <span class="text-rose-600">Shape</span>
+              <span id="sumShape" class="font-medium">Round</span>
+            </div>
+            <div class="flex items-center justify-between text-[14px]">
+              <span class="text-rose-600">Flavor</span>
+              <span id="sumFlavor" class="font-medium">Vanilla</span>
+            </div>
+            <div class="flex items-center justify-between text-[14px]">
+              <span class="text-rose-600">Filling</span>
+              <span id="sumFilling" class="font-medium">Whipped Cream</span>
+            </div>
+            <div class="flex items-center justify-between text-[14px]">
+              <span class="text-rose-600">Eggless</span>
+              <span id="sumEggless" class="font-medium">No</span>
+            </div>
+            <div class="flex items-center justify-between text-[14px]">
+              <span class="text-rose-600">Toppings</span>
+              <span id="sumToppings" class="font-medium">None</span>
+            </div>
+            <div class="pt-2 mt-1 border-t border-rose-100 flex items-center justify-between">
+              <span class="text-[15px] font-semibold">Estimated Total</span>
+              <div class="flex items-center gap-1.5">
+                <i data-lucide="wallet" class="h-5 w-5 text-rose-600"></i>
+                <span id="sumPrice" class="text-[17px] font-semibold tracking-tight">₹1,200</span>
+              </div>
+            </div>
+            <p class="text-[11px] text-rose-500">Taxes included. Final price may vary after design confirmation.</p>
+          </div>
+        </section>
+
+        <!-- Inline Alert (hidden by default) -->
+        <div id="alert" class="hidden rounded-lg border border-rose-300 bg-rose-100 px-3 py-2 text-[13px] text-rose-800">
+          <span id="alertMsg">Please fill all required fields.</span>
+        </div>
+      </form>
+    </main>
+
+    <!-- Sticky Footer Action -->
+    <div class="fixed bottom-0 inset-x-0 z-50 border-t border-rose-200 bg-rose-50/95 backdrop-blur">
+      <div class="mx-auto max-w-md px-4 py-3">
+        <div class="flex items-center gap-3">
+          <div class="flex-1 rounded-xl border border-rose-200 bg-white px-3 py-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[12px] text-rose-500">Estimated</span>
+              <span id="miniPrice" class="text-[16px] font-semibold tracking-tight">₹1,200</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span id="miniSummary" class="text-[12px] text-rose-600 truncate">1 kg • Round • Vanilla</span>
+              <span id="miniMethod" class="text-[12px] text-rose-600">Delivery</span>
+            </div>
+          </div>
+          <button id="submitBtn" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-rose-600 text-white px-4 py-3 text-[15px] font-medium active:translate-y-[1px] transition hover:bg-rose-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400">
+            <i data-lucide="check-circle-2" class="h-5 w-5"></i>
+            Review &amp; Place
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Initialize lucide icons with stroke width 1.5
+      document.addEventListener('DOMContentLoaded', () => {
+        lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+      });
+
+      // Elements
+      const form = document.getElementById('cakeForm');
+      const sizeInputs = form.querySelectorAll('input[name="size"]');
+      const shapeInputs = form.querySelectorAll('input[name="shape"]');
+      const flavorInputs = form.querySelectorAll('input[name="flavor"]');
+      const fillingInputs = form.querySelectorAll('input[name="filling"]');
+      const egglessInput = document.getElementById('eggless');
+      const toppingsInputs = document.querySelectorAll('#toppingsGroup input[type="checkbox"]');
+
+      const deliveryRadio = document.getElementById('delivery');
+      const pickupRadio = document.getElementById('pickup');
+      const addressBlock = document.getElementById('addressBlock');
+
+      const msgInput = document.getElementById('message');
+      const msgCount = document.getElementById('msgCount');
+
+      const fileInput = document.getElementById('refImage');
+      const fileName = document.getElementById('fileName');
+
+      // Summary fields
+      const sumSize = document.getElementById('sumSize');
+      const sumShape = document.getElementById('sumShape');
+      const sumFlavor = document.getElementById('sumFlavor');
+      const sumFilling = document.getElementById('sumFilling');
+      const sumEggless = document.getElementById('sumEggless');
+      const sumToppings = document.getElementById('sumToppings');
+      const sumPrice = document.getElementById('sumPrice');
+
+      const miniPrice = document.getElementById('miniPrice');
+      const miniSummary = document.getElementById('miniSummary');
+      const miniMethod = document.getElementById('miniMethod');
+
+      // Alert
+      const alertBox = document.getElementById('alert');
+      const alertMsg = document.getElementById('alertMsg');
+
+      // Simple pricing model (INR)
+      const basePerKg = {
+        'vanilla': 900,
+        'chocolate': 1000,
+        'red velvet': 1200,
+        'butterscotch': 1000,
+        'black forest': 1100,
+        'pineapple': 950,
+        'fresh fruit': 1200
+      };
+      const shapeAdd = { 'round': 0, 'square': 80, 'heart': 150 };
+      const fillingAdd = { 'whipped cream': 0, 'buttercream': 80, 'mousse': 120, 'cream cheese': 150 };
+      const toppingAdd = 60; // each
+      const egglessAdd = 120; // flat
+      const deliveryFee = 99; // within service area
+
+      function getSelected(name) {
+        const el = form.querySelector(`input[name="${name}"]:checked`);
+        return el ? el.value : null;
+      }
+      function getToppings() {
+        return Array.from(toppingsInputs).filter(i => i.checked).map(i => i.value);
+      }
+
+      function formatINR(n) {
+        return '₹' + n.toLocaleString('en-IN');
+      }
+
+      function computePrice() {
+        const size = parseFloat(getSelected('size') || '1');
+        const flavor = getSelected('flavor') || 'vanilla';
+        const shape = getSelected('shape') || 'round';
+        const filling = getSelected('filling') || 'whipped cream';
+        const eggless = egglessInput.checked;
+        const toppings = getToppings();
+        const fulfillment = deliveryRadio.checked ? 'delivery' : 'pickup';
+
+        let price = Math.round((basePerKg[flavor] || 1000) * size);
+        price += shapeAdd[shape] || 0;
+        price += fillingAdd[filling] || 0;
+        price += toppings.length * toppingAdd;
+        if (eggless) price += egglessAdd;
+        if (fulfillment === 'delivery') price += deliveryFee;
+
+        // Update summary
+        sumSize.textContent = `${size} kg`;
+        sumShape.textContent = shape.charAt(0).toUpperCase() + shape.slice(1);
+        sumFlavor.textContent = titleCase(flavor);
+        sumFilling.textContent = titleCase(filling);
+        sumEggless.textContent = eggless ? 'Yes' : 'No';
+        sumToppings.textContent = toppings.length ? toppings.map(titleCase).join(', ') : 'None';
+        sumPrice.textContent = formatINR(price);
+        miniPrice.textContent = formatINR(price);
+        miniSummary.textContent = `${size} kg • ${titleCase(shape)} • ${titleCase(flavor)}`;
+        miniMethod.textContent = fulfillment === 'delivery' ? 'Delivery' : 'Pickup';
+      }
+
+      function titleCase(str) {
+        return str.replace(/\w\S*/g, w => w[0].toUpperCase() + w.slice(1));
+      }
+
+      function toggleAddress() {
+        const isDelivery = deliveryRadio.checked;
+        addressBlock.style.display = isDelivery ? '' : 'none';
+      }
+
+      // Event bindings
+      [...sizeInputs, ...shapeInputs, ...flavorInputs, ...fillingInputs].forEach(i => i.addEventListener('change', computePrice));
+      egglessInput.addEventListener('change', computePrice);
+      toppingsInputs.forEach(i => i.addEventListener('change', computePrice));
+      deliveryRadio.addEventListener('change', () => { toggleAddress(); computePrice(); });
+      pickupRadio.addEventListener('change', () => { toggleAddress(); computePrice(); });
+
+      msgInput.addEventListener('input', () => {
+        msgCount.textContent = `${msgInput.value.length} / 30`;
+      });
+
+      fileInput.addEventListener('change', () => {
+        const f = fileInput.files?.[0];
+        if (!f) {
+          fileName.textContent = 'JPG, PNG up to 5MB';
+          return;
+        }
+        if (f.size > 5 * 1024 * 1024) {
+          fileName.textContent = 'File too large (max 5MB)';
+          fileName.classList.add('text-red-600');
+        } else {
+          fileName.textContent = f.name;
+          fileName.classList.remove('text-red-600');
+        }
+      });
+
+      // Validation and submit
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        alertBox.classList.add('hidden');
+
+        const required = [
+          { id: 'name', label: 'Name' },
+          { id: 'phone', label: 'Phone' },
+          { id: 'date', label: 'Date' },
+          { id: 'time', label: 'Time' }
+        ];
+        // Delivery-specific required
+        if (deliveryRadio.checked) {
+          required.push({ id: 'address1', label: 'Address' }, { id: 'city', label: 'City' }, { id: 'pincode', label: 'PIN' });
+        }
+
+        let missing = [];
+        required.forEach(f => {
+          const el = document.getElementById(f.id);
+          const val = (el && 'value' in el) ? String(el.value).trim() : '';
+          if (!val) {
+            missing.push(f.label);
+            // highlight
+            el?.parentElement?.classList.add('ring-2', 'ring-rose-400');
+            setTimeout(() => el?.parentElement?.classList.remove('ring-2', 'ring-rose-400'), 1200);
+          }
+        });
+
+        if (missing.length) {
+          alertMsg.textContent = `Please fill: ${missing.join(', ')}`;
+          alertBox.classList.remove('hidden');
+          return;
+        }
+
+        // Mock success
+        alertMsg.textContent = 'Thank you! We have received your order. We will confirm shortly.';
+        alertBox.classList.remove('hidden');
+        alertBox.classList.remove('bg-rose-100', 'border-rose-300', 'text-rose-800');
+        alertBox.classList.add('bg-emerald-50', 'border-emerald-300', 'text-emerald-800');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Init
+      toggleAddress();
+      computePrice();
+    </script>
+  
+</body></html>
